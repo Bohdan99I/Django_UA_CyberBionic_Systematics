@@ -19,7 +19,7 @@ def weather(request):
     if not city:
         return HttpResponse('<script>alert("Please provide a city!");</script>')
 
-    key = "a4c065f24d8b6403dc757b8eec2628c1"
+    key = "YOUR_APPID"
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}'
 
     response = requests.get(url)
