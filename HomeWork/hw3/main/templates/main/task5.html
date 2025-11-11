@@ -1,0 +1,9 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Task5</title></head><body>
+<h1>Завдання 5 — відсортовано за priority (спад)</h1>
+<ul>
+{% for item in lets_do_it %}
+  <li>Priority: {{ item.priority }} — Task: {{ item.task }}</li>
+{% endfor %}
+</ul>
+<p><a href="/">Назад</a></p>
+</body></html>

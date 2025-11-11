@@ -1,0 +1,9 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Task6</title></head><body>
+<h1>Завдання 6 — список людей</h1>
+<ol>
+{% for person in people %}
+  <li>{{ person.name }} {{ person.surname }}</li>
+{% endfor %}
+</ol>
+<p><a href="/">Назад</a></p>
+</body></html>
