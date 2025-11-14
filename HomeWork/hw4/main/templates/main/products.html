@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Products</title>
+</head>
+<body>
+<h1>Products</h1>
+<ul>
+{% for p in products %}
+  <li>
+    {{ p.name }} -
+    {% if p.category %}
+      {{ p.category.name }}
+    {% else %}
+      Без категорії
+    {% endif %}
+    - {{ p.price }} - stock: {{ p.stock }}
+  </li>
+{% endfor %}
+</ul>
+<p><a href="/">Назад</a></p>
+</body>
+</html>
