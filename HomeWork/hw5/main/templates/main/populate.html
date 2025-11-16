@@ -1,0 +1,7 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>DB data</title></head><body>
+<h2>Дані у БД</h2>
+<h3>Категорії</h3><ul>{% for c in categories %}<li>{{ c.name }}</li>{% endfor %}</ul>
+<h3>Товари</h3><ul>{% for p in products %}<li>{{ p.name }} - {{ p.price }}</li>{% endfor %}</ul>
+<h3>Відгуки</h3><ul>{% for r in reviews %}<li>{{ r.user_email }} - {{ r.rating }} - {{ r.review_type }}</li>{% endfor %}</ul>
+<p><a href="/">Назад</a></p>
+</body></html>
