@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Search</title></head><body>
+<h1>Search Articles</h1>
+<form method="get">
+  <input name="q" placeholder="q" value="{{ q }}">
+  <input name="tag" placeholder="tag" value="{{ tag }}">
+  <button type="submit">Search</button>
+</form>
+<ul>
+{% for a in articles %}
+  <li>{{ a.title }} - {{ a.created_at }} - Tags: {% for t in a.tags.all %}{{ t.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+{% empty %}
+  <li>No results</li>
+{% endfor %}
+</ul>
+<p><a href="/">Назад</a></p>
+</body></html>

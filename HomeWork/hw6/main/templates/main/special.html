@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Special</title></head><body>
+<h1>Special Queries</h1>
+<h2>Starts with 'Л'</h2>
+<ul>{% for a in starts_with_L %}<li>{{ a.title }} - {{ a.created_at }}</li>{% empty %}<li>None</li>{% endfor %}</ul>
+<h2>Has digits</h2>
+<ul>{% for a in with_digit %}<li>{{ a.title }} - {{ a.created_at }}</li>{% empty %}<li>None</li>{% endfor %}</ul>
+<p><a href="/">Назад</a></p>
+</body></html>
